@@ -29,9 +29,10 @@ public class HelloWorld {
 			int c = 30;
 		}
 		
-		// 3. 식별자
+		// 3. 식별자, 이름 생성시 대소문자 구분됨, 카멜기법으로 사용
 		int num = 10;
 		int Num = 20;
+		char KangKim = 'k';
 		
 		
 
