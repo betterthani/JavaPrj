@@ -8,7 +8,7 @@ public class ScannerExample2 {
 		int age;
 		System.out.println("이름, 나이 입력하세요");
 		System.out.println("나이 : ");
-		age = Integer.parseInt(scan.nextInt());
+		age = Integer.parseInt(scan.nextLine());
 		System.out.println("이름 : ");
 		name = scan.nextLine();
 		
