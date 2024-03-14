@@ -82,8 +82,6 @@ public class Test10 {
 		for(int i = 0; i < count; i++) {
 			if(foodNameList[i].equals(foodname)) {
 				System.out.println("수정할 내용을 입력해주세요.");
-				System.out.print("식자재 이름 : ");
-				foodNameList[i] = scan.next();
 				System.out.print("식자재 수량 : ");
 				amountList[i] = scan.nextInt();
 				if(amountList[i] == 0) {
@@ -91,11 +89,6 @@ public class Test10 {
 					deletList(i);
 					break;
 				}
-				System.out.print("유통기한 : ");
-				expirationDateList[i] = scan.next();
-				System.out.print("설명 : ");
-				manufacList[i] = scan.next();
-				break;
 			} else {
 				System.out.println("해당 이름을 가진 내역이 존재하지 않습니다.");
 			}
@@ -105,10 +98,12 @@ public class Test10 {
 	
 	// index 번째를 이용한 내용 삭제
 	private static void deletList(int indexNum) {
-		foodNameList[indexNum] = "";
-		amountList[indexNum] = 0;
-		expirationDateList[indexNum] =  "";
-		manufacList[indexNum] =  "";
+		for(int i = indexNum + 1; i < count; i++) {
+			foodNameList[i-1] = foodNameList[i];
+			amountList[i-1] = amountList[i];
+			expirationDateList[i-1] = expirationDateList[i];
+			manufacList[i-1] = manufacList[i];
+		}
 		count--;
 		System.out.println("삭제 되었습니다.");
 	}
