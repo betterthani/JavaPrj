@@ -26,8 +26,8 @@ class Person{
 	private String name;
 	private int age;
 	
-//	
-//	@Override
+//	자바 책 p496 hashcode참고
+//	@Override 
 //	public int hashCode() {
 //		return Objects.hash(age, name);
 //	}
