@@ -124,7 +124,7 @@ public class MovieManager {
 	private static void insertMovie() {
 		System.out.print("제목 : ");
 		String movieSubject = scan.next();
-		System.out.print("장르 : ");
+		System.out.print("장르 : "); 
 		String genre = scan.next();
 		System.out.print("감독 : ");
 		String direct = scan.next();
